@@ -1,0 +1,12 @@
+/*
+Enter your query here.
+*/
+WITH RECURSIVE numbers_cte AS (
+    SELECT 20 AS number
+    UNION ALL
+    SELECT number - 1
+    FROM numbers_cte
+    WHERE number > 1
+)
+SELECT REPEAT('* ', number) AS asterisks
+FROM numbers_cte;

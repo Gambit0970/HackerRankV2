@@ -1,0 +1,5 @@
+sN = int(input())
+s = set([int(x) for x in input().split()])
+rN = int(input())
+r = set([int(x) for x in input().split()])
+print(len(s.union(r)))

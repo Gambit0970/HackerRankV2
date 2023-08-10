@@ -1,0 +1,15 @@
+/*
+Enter your query here.
+*/
+SELECT city, length(city)
+FROM station
+WHERE LENGTH(city) = (SELECT min(LENGTH(city)) FROM station)
+--   or LENGTH(city) = (SELECT MAX(LENGTH(city)) FROM station)
+order by city
+limit 1;
+SELECT city, length(city)
+FROM station
+WHERE LENGTH(city) = (SELECT max(LENGTH(city)) FROM station)
+--   or LENGTH(city) = (SELECT MAX(LENGTH(city)) FROM station)
+order by city
+limit 1;
